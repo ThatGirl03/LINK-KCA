@@ -4,14 +4,16 @@ from dotenv import load_dotenv
 from firebase_admin import credentials, firestore, initialize_app
 
 load_dotenv()
-# Get Firebase key from environment variable
-firebase_key_json = os.getenv('FIREBASE_KEY')
 
-if not firebase_key_json:
-    raise Exception("FIREBASE_KEY environment variable is not set.")
+# Get the path to the Firebase key JSON file from the environment variable
+firebase_key_path = os.getenv('FIREBASE_KEY_PATH')
 
-# Parse the Firebase key JSON string to a Python dictionary
-firebase_key_dict = json.loads(firebase_key_json)
+if not firebase_key_path:
+    raise Exception("FIREBASE_KEY_PATH environment variable is not set.")
+
+# Load the Firebase key JSON file into a dictionary
+with open(firebase_key_path) as f:
+    firebase_key_dict = json.load(f)
 
 # Initialize Firebase using the Firebase Admin SDK private key JSON dictionary
 cred = credentials.Certificate(firebase_key_dict)
