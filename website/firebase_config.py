@@ -18,6 +18,7 @@ with open(firebase_key_path) as f:
 # Initialize Firebase using the Firebase Admin SDK private key JSON dictionary
 cred = credentials.Certificate(firebase_key_dict)
 initialize_app(cred)
+# Add this temporarily to verify the path
 
 # Set up Firestore client
 db = firestore.client()
