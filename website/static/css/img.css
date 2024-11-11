@@ -1,0 +1,33 @@
+/* img.css */
+
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .image-item {
+    flex: 1;
+    max-width: calc(25% - 10px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .image-item {
+      max-width: calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .images-container {
+      flex-direction: column;
+    }
+    .image-item {
+      max-width: 100%;
+    }
+  }
+  
