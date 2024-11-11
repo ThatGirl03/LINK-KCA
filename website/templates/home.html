@@ -16,7 +16,6 @@
 <section class="hero">
   <div class="slider-container">
     <div class="slides">
-      <!-- Hero Image as part of the slider -->
       <div class="hero">
         <div class="hero-image">
           
@@ -56,36 +55,21 @@
 <section class="about">
   <div class="about-content">
     <h2>About Us</h2>
-    <p> At Easy Link, we are dedicated to bridging the digital divide by providing offline access to educational content, specifically focusing on informal ICT education. Our mission is to empower communities in remote or underdeveloped areas by delivering essential learning resources without the need for an active internet connection. We achieve this through an innovative system built around Raspberry Pi, a microcontroller that acts as a local server, enabling offline access to e-books, courses, and educational materials.
-      
-     <p> Powered by a solar-charged power bank, our Raspberry Pi setup is particularly effective in regions with abundant sunlight, making it a sustainable and reliable solution for education in even the most isolated areas. We partner with organizations engaged with schools to deliver this system, ensuring wide distribution to learning institutions. </p>
-      
-     <p>  Our focus is on providing content that nurtures ICT skills, using free resources such as courses and textbooks from reputable organizations with a strong presence in the digital movement, like Microsoft. By offering this platform, we aim to equip learners with the digital skills necessary for the future, ensuring no one is left behind in the age of technology.</p>
-      
-     <p> At Easy Link, we believe in the transformative power of education and technology, and we're committed to empowering communities and fostering educational growth where it's needed most.</p>
-    <p>Our commitment extends beyond mere innovation. We work tirelessly to integrate sustainability into every aspect of our operations, ensuring that every step we take brings us closer to a greener and more connected world. Join us on our journey as we turn ideas into action, and transform our vision of a sustainable future into reality.</p>
+    <p> At Easy Link, we're all about redefining education through the magic of podcasts. We make learning easy, fun, and available whenever and wherever you want it. No more boring textbooks or long-winded lectures—just pop in your earbuds, press play, and dive into a world of knowledge. Whether you're chilling at home, on a road trip, or even jogging in the park, Easy Link makes sure that education fits effortlessly into your lifestyle.
+    </p>
+    <p> We believe that learning should be as versatile as you are. With our curated podcasts, you can learn something new without putting your life on pause. From tech tips and business strategies to science wonders and creative skills, we provide the kind of content that not only teaches you but keeps you entertained along the way. It's education for the multitasking, fun-loving, on-the-go modern learner—just the way it should be.
+    </p>
+    <p> Our mission is simple: Make learning accessible, enjoyable, and doable for everyone. We collaborate with incredible content creators and educators to bring the best audio experiences straight to you. No internet? No problem. Download our episodes and learn at your convenience, even offline. We're here to ensure learning is limitless and seamless, no matter where life takes you.
+    </p>
+    <p> At Easy Link, we don't just see education as a task—we see it as an adventure, and we want you to be a part of it. Whether you're diving deep into coding or just brushing up on your culinary skills, our podcasts are here to make the journey enjoyable and empowering. Education should always fit your schedule, your passions, and most importantly—your life.
+    </p>
+    <p> Our vision is to create a community of lifelong learners who are curious, connected, and committed to growing every day. We're not just about providing information; we're about making those lightbulb moments happen—wherever and whenever they need to. Join us as we turn learning into a journey full of discovery, laughter, and moments that matter.</p>
     <a href="{{ url_for('views.about') }}" class="learn-more-link">Learn More</a>
   </div>
 </section>
 
 
-<script>
-  let currentSlide = 0;
 
-  function moveSlide(step) {
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
-
-    currentSlide = (currentSlide + step + totalSlides) % totalSlides;
-    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-  }
-
-  // Optional: Automatically slide every 5 seconds
-  setInterval(() => moveSlide(1), 5000);
-
-
-
-</script>
 
 <div id="chatbot-container" class="chatbot-container">
   <div class="chatbot-icon">
