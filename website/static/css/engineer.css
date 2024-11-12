@@ -355,7 +355,6 @@ body {
     gap: 10px;
     justify-content: center;
 }
-
 /* Generate Podcast Button */
 .generate-podcast-btn, .view-podcast-btn {
     background-color: #007bff;
