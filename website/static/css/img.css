@@ -1,0 +1,45 @@
+.images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    margin-bottom: 20px; /* Adds space between images and the container below */
+}
+
+.image-item {
+    flex: 1;
+    width: 100%; /* Ensures all images take up equal width */
+    max-width: calc(25% - 10px); /* Adjusts to keep 4 images per row */
+    height: 250px; /* Increased height to make images larger */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Adds space below each image */
+}
+
+/* Adjustments for tablet-sized screens */
+@media (max-width: 768px) {
+    .image-item {
+        max-width: calc(50% - 10px); /* Adjusts to 2 images per row */
+        height: 220px; /* Adjusted height for larger images on tablets */
+    }
+}
+
+/* Adjustments for mobile-sized screens */
+@media (max-width: 480px) {
+    .images-container {
+        flex-direction: column; /* Stacks images vertically */
+        align-items: center;
+    }
+    .image-item {
+        max-width: 100%; /* Full width for single column layout */
+        height: 270px; /* Further increased height for mobile screens */
+    }
+}
+
+
+.logo-image {
+    height: 50px;
+    width: auto;
+}

@@ -301,3 +301,8 @@ html, body {
 #okButton:hover {
   background-color: #238686;
 }
+
+.logo-image {
+  height: 50px;
+  width: auto;
+}
