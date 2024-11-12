@@ -1,19 +1,20 @@
 {% extends "base.html" %}
-{% block title %}engineer{% endblock %}
+{% block title %}Engineer{% endblock %}
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/sectorA.css') }}" />
 <link rel="stylesheet" href="{{ url_for('static', filename='css/video_grid.css') }}" />
-<link rel="stylesheet"href="{{ url_for('static', filename='css/styles.css') }}"/>
-<link rel="stylesheet"href="{{ url_for('static', filename='css/engineer.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/engineer.css') }}" />
+
 <div class="title-container">
     <h2 class="page-title">Software Engineering</h2>
 </div>
 
-
-<!-- Generate Podcast Button -->
+<!-- Generate Podcast Buttons Container -->
 <div class="generate-podcast-container">
     <button class="generate-podcast-btn" onclick="openPodcastModal()">🎙️ Generate Podcasts</button>
+    <button class="view-podcast-btn" onclick="openPodcastListModal()">🎧 View Generated Podcasts</button>
 </div>
 
 <!-- Podcast Generation Modal -->
@@ -27,63 +28,16 @@
     </div>
 </div>
 
-<script>
-  function openPodcastModal() {
-    document.getElementById("podcast-modal").style.display = "flex";
-    document.getElementById("video-container").style.opacity = "0.4"; // Lower opacity for dim effect
-}
-
-function closePodcastModal() {
-    document.getElementById("podcast-modal").style.display = "none";
-    document.getElementById("video-container").style.opacity = "1"; // Reset opacity
-}
-
-</script>
-
 <!-- Podcast Display Modal for Showing Generated Podcasts -->
 <div id="podcast-list-modal" class="modal" style="display: none;">
     <div class="modal-content">
         <span class="close" onclick="closePodcastListModal()">&times;</span>
         <h2>Your Generated Podcasts</h2>
         <div id="podcast-list">
-            <!-- Placeholder message -->
             <p id="no-podcasts-message">No Podcasts generated yet.</p>
         </div>
     </div>
 </div>
-
-<script>
-    // Sample data - Replace this with dynamic data fetching
-    const generatedPodcasts = [
-        { title: "Podcast 1", url: "link-to-podcast-1.mp3" },
-        { title: "Podcast 2", url: "link-to-podcast-2.mp3" }
-    ];
-
-    // Function to open the podcast list modal
-    function openPodcastListModal() {
-        const podcastList = document.getElementById("podcast-list");
-        const noPodcastsMessage = document.getElementById("no-podcasts-message");
-
-        if (generatedPodcasts.length > 0) {
-            noPodcastsMessage.style.display = "none";
-            podcastList.innerHTML = generatedPodcasts
-                .map(podcast => `
-                    <div class="podcast-item">
-                        <a href="${podcast.url}" target="_blank">${podcast.title}</a>
-                    </div>
-                `)
-                .join("");
-        } else {
-            noPodcastsMessage.style.display = "block";
-            podcastList.innerHTML = "";
-        }
-        document.getElementById("podcast-list-modal").style.display = "flex";
-    }
-
-    function closePodcastListModal() {
-        document.getElementById("podcast-list-modal").style.display = "none";
-    }
-</script>
 
 <div class="video-grid-container">
     <div class="video-item">
@@ -103,7 +57,21 @@ function closePodcastModal() {
     </div>
 </div>
 
+<script>
+    function openPodcastModal() {
+        document.getElementById("podcast-modal").style.display = "flex";
+    }
 
+    function closePodcastModal() {
+        document.getElementById("podcast-modal").style.display = "none";
+    }
 
+    function openPodcastListModal() {
+        document.getElementById("podcast-list-modal").style.display = "flex";
+    }
 
+    function closePodcastListModal() {
+        document.getElementById("podcast-list-modal").style.display = "none";
+    }
+</script>
 {% endblock %}
