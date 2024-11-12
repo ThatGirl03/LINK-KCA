@@ -26,8 +26,35 @@
         </video>
         <p>Advanced Topics in Software Engineering</p>
     </div>
-
- 
 </div>
+
+
+<!-- Generate Podcast Button -->
+<div class="generate-podcast-container">
+    <button class="generate-podcast-btn" onclick="openPodcastModal()">🎙️ Generate Podcasts</button>
+</div>
+
+<!-- Podcast Generation Modal -->
+<div id="podcast-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" onclick="closePodcastModal()">&times;</span>
+        <h2>Generate Podcast</h2>
+        <p>Upload a PDF to create a podcast:</p>
+        <input type="file" accept=".pdf" class="upload-input" />
+        <button class="download-button">Generate Podcast</button>
+    </div>
+</div>
+
+<script>
+    function openPodcastModal() {
+        document.getElementById("podcast-modal").style.display = "flex";
+        document.getElementById("video-container").style.opacity = "0.5";
+    }
+    
+    function closePodcastModal() {
+        document.getElementById("podcast-modal").style.display = "none";
+        document.getElementById("video-container").style.opacity = "1";
+    }
+</script>
 
 {% endblock %}
