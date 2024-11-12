@@ -31,15 +31,16 @@ href="{{ url_for('static', filename='css/styles.css') }}"
 </div>
 
 <script>
-    function openPodcastModal() {
-        document.getElementById("podcast-modal").style.display = "flex";
-        document.getElementById("video-container").style.opacity = "0.5";
-    }
-    
-    function closePodcastModal() {
-        document.getElementById("podcast-modal").style.display = "none";
-        document.getElementById("video-container").style.opacity = "1";
-    }
+  function openPodcastModal() {
+    document.getElementById("podcast-modal").style.display = "flex";
+    document.getElementById("video-container").style.opacity = "0.4"; // Lower opacity for dim effect
+}
+
+function closePodcastModal() {
+    document.getElementById("podcast-modal").style.display = "none";
+    document.getElementById("video-container").style.opacity = "1"; // Reset opacity
+}
+
 </script>
 
 <div class="video-grid-container">
