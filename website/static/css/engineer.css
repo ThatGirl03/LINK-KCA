@@ -352,3 +352,79 @@ body {
     color: #007bff;
     margin-top: 10px;
 }
+
+/* Modal Overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px); /* Blurred background */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Close Button in Modal */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.modal-content .close:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* Podcast List */
+#podcast-list {
+    margin-top: 20px;
+}
+
+#no-podcasts-message {
+    font-size: 1rem;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Podcast Item */
+.podcast-item {
+    background-color: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    margin: 10px 0;
+    transition: transform 0.2s ease;
+}
+
+.podcast-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.podcast-item:hover {
+    transform: scale(1.02);
+}
