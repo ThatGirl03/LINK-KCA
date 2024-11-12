@@ -320,41 +320,48 @@ body {
 .download-button:hover {
     background-color: #e0a800;
 }
-
 /* Video Grid Container */
 .video-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
     gap: 15px;
     padding: 20px;
     background-color: #15a99f; /* Teal blue background */
     border-radius: 8px;
+    margin: 0 auto; /* Center alignment */
+    max-width: 90%; /* Restrict width for better layout on larger screens */
 }
 
 /* Video Item */
 .video-item {
-    background-color: #ffffff;
+    background-color: #ffffff; /* White background for each video item */
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    text-align: center;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
 }
 
 .video-item p {
     font-size: 1rem;
     font-weight: bold;
     color: #000000; /* Black text */
-    text-align: center;
+    margin-top: 8px;
 }
 
 /* Buttons Container */
 .generate-podcast-container {
-    text-align: center;
-    margin-top: 20px;
     display: flex;
-    gap: 10px;
     justify-content: center;
+    gap: 15px; /* Gap between buttons */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
+
 /* Generate Podcast Button */
 .generate-podcast-btn, .view-podcast-btn {
     background-color: #007bff;
@@ -366,6 +373,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.4);
+    max-width: 200px; /* Control button width */
 }
 
 .generate-podcast-btn:hover {
@@ -390,7 +398,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px); /* Blurred background */
     justify-content: center;
     align-items: center;
 }
@@ -418,6 +426,38 @@ body {
     color: black;
 }
 
+/* Upload Input */
+.upload-input {
+    display: block;
+    margin: 20px auto;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 400px;
+    color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Generate Podcast Action Button */
+.download-button {
+    display: inline-block;
+    background-color: #ffc107; /* Dark goldish color */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 10px rgba(255, 193, 7, 0.4);
+    margin: 0 auto; /* Centered */
+}
+
+.download-button:hover {
+    background-color: #e0a800;
+}
 
 /* Podcast List */
 #podcast-list {
@@ -451,3 +491,4 @@ body {
 .podcast-item:hover {
     transform: scale(1.02);
 }
+
