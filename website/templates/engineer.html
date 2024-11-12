@@ -13,25 +13,6 @@ href="{{ url_for('static', filename='css/styles.css') }}"
     <h2 class="page-title">Software Engineering</h2>
 </div>
 
-<div class="video-grid-container">
-    
-    <div class="video-item">
-        <video width="100%" controls>
-            <source src="{{ url_for('static', filename='videos/soft.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <p>Mmmmm Software Engineering</p>
-    </div>
-
-    <div class="video-item">
-        <video width="100%" controls>
-            <source src="{{ url_for('static', filename='videos/POD1.wav') }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <p>Advanced Topics in Software Engineering</p>
-    </div>
-</div>
-
 
 <!-- Generate Podcast Button -->
 <div class="generate-podcast-container">
@@ -60,5 +41,26 @@ href="{{ url_for('static', filename='css/styles.css') }}"
         document.getElementById("video-container").style.opacity = "1";
     }
 </script>
+
+<div class="video-grid-container">
+    
+    <div class="video-item">
+        <video width="100%" controls>
+            <source src="{{ url_for('static', filename='videos/soft.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Mmmmm Software Engineering</p>
+    </div>
+
+    <div class="video-item">
+        <video width="100%" controls>
+            <source src="{{ url_for('static', filename='videos/POD1.wav') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Advanced Topics in Software Engineering</p>
+    </div>
+</div>
+
+
 
 {% endblock %}
