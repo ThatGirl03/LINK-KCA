@@ -415,7 +415,11 @@ def edit_memo_post(post_id):
 
 @views.route('/engineer')
 def engineer():
-    return render_template('engineer.html')
+    # Retrieve video data from Firestore
+    videos_ref = db.collection('videos')
+    videos = [doc.to_dict() for doc in videos_ref.stream()]  # Convert Firestore documents to dictionary format
+    return render_template('engineer.html', videos=videos)
+    
 
 @views.route('/robotics')
 def robotics():

@@ -40,13 +40,15 @@
 </div>
 
 <div class="video-grid-container">
+    {% for video in videos %}
     <div class="video-item">
         <video width="100%" controls>
-            <source src="{{ url_for('static', filename='videos/soft.mp4') }}" type="video/mp4">
+            <source src="{{ video.url }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Mmmmm Software Engineering</p>
+        <p>{{ video.name }}</p> 
     </div>
+    {% endfor %}
 
     <div class="video-item">
         <video width="100%" controls>

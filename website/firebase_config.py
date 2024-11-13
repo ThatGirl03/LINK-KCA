@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from firebase_admin import credentials, firestore, initialize_app
+from google.cloud import storage 
 
 # Load environment variables from .env
 load_dotenv()
@@ -22,7 +23,23 @@ firebase_key_dict = {
 
 # Initialize Firebase using the credentials dictionary
 cred = credentials.Certificate(firebase_key_dict)
-initialize_app(cred)
-
+initialize_app(cred, {
+    'storageBucket': os.getenv("FIREBASE_STORAGE_BUCKET")  # Set the storage bucket
+})
+               
 # Set up Firestore client
 db = firestore.client()
+
+
+# Set up Firebase Storage client
+storage_client = storage.Client.from_service_account_info(firebase_key_dict)
+bucket = storage_client.bucket(os.getenv("FIREBASE_STORAGE_BUCKET"))
+
+
+def upload_file_to_firebase(file_path, destination_blob_name):
+    """Uploads a file to Firebase Storage and returns the public URL."""
+    blob = bucket.blob(destination_blob_name)
+    blob.upload_from_filename(file_path)
+    blob.make_public()
+    print(f"File uploaded to {blob.public_url}")
+    return blob.public_url
