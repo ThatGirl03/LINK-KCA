@@ -30,7 +30,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
     gap: 15px;
     padding: 20px;
-    background-color: #15a99f; /* Teal blue background */
+    background-color: #f9f9f9; /* Teal blue background */
     border-radius: 8px;
     margin: 0 auto; /* Center alignment */
     max-width: 90%; /* Restrict width for better layout on larger screens */
@@ -38,7 +38,7 @@ body {
 
 /* Video Item */
 .video-item {
-    background-color: #ffffff; /* White background for each video item */
+    background-color: #27cfb3; /* White background for each video item */
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
