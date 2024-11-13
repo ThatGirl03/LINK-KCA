@@ -538,6 +538,7 @@ def get_messages():
     return jsonify(messages)
 
 
+
 @views.route('/send_message', methods=['POST'])
 def send_message():
     data = request.get_json()
