@@ -12,13 +12,13 @@
 </div>
 
 <div class="video-grid-container">
-    {% for video in agric %}
+    {% for video in videos %}
     <div class="video-item">
         <video width="100%" controls>
-            <source src="{{ agric.url }}" type="agric/mp4">
+            <source src="{{ videos.url }}" type="videos/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>{{ agric.name }}</p> 
+        <p>{{ videos.name }}</p> 
     </div>
     {% endfor %}
   </div>
