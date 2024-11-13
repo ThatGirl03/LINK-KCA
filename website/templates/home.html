@@ -89,47 +89,18 @@ href="{{ url_for('static', filename='css/styles.css') }}"
   </div>
 </section>
 
-
-
-
-<div id="chatbot-container" class="chatbot-container">
-  <div class="chatbot-icon">
-    <img src="/static/images/bot.jpg" alt="Chat Icon" />
-  </div>
-  <div id="chatbot-expanded" class="chatbot-expanded">
-    <button class="close-chatbot">&times;</button> 
-    <iframe 
-    src="https://creator.voiceflow.com/prototype/66c5a888f9ca8d559e85ba72" 
-    frameborder="0" 
-    title="Voiceflow Prototype 66c5a888f9ca8d559e85ba72">
-</iframe>
-
-  </div>
-</div>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var chatbotIcon = document.querySelector('.chatbot-icon');
-    var chatbotExpanded = document.getElementById('chatbot-expanded');
-
-    chatbotIcon.addEventListener('click', function() {
-      // Toggle the display of the expanded view
-      if (chatbotExpanded.style.display === 'block') {
-        chatbotExpanded.style.display = 'none';
-      } else {
-        chatbotExpanded.style.display = 'block';
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6734d8807f5ae371faba6606' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
       }
-    });
-
-    // Optional: Add functionality to close the chatbot
-    var closeChatbot = document.querySelector('.close-chatbot');
-    if (closeChatbot) {
-      closeChatbot.addEventListener('click', function() {
-        chatbotExpanded.style.display = 'none';
-      });
-    }
-  });
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
 </script>
 
 
