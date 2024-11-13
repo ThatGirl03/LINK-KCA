@@ -1,24 +1,34 @@
 
+/* Make sure the HTML and body take up the full viewport height */
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .content {
-    flex: 1; /* This will make sure the content area takes up the remaining space */
-  }
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure content area expands to fill remaining space */
+.content {
+  flex: 1;
+}
+
+/* Style the footer to stick to the bottom */
+.footer-teal-blue {
+  background-color: #20b2aa;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; /* This pushes the footer to the bottom */
+  position: relative;
+  bottom: 0;
+}
+
+
   .dropdown-toggle::after {
     display: none; /* Hide the default dropdown arrow */
   }
-  .footer-teal-blue {
-      background-color: #20b2aa; /* Teal-blue color for footer */
-      color: #ffffff; /* White text color */
-      padding: 20px 0; /* Padding for footer */
-    }
+ 
   .footer-links a {
     color: #ffffff;
     text-decoration: none;
