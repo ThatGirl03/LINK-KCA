@@ -28,14 +28,12 @@ body {
 .video-grid-container {
     display: flex;
     flex-direction: column; /* Stack videos vertically */
-    gap: 15px;
+    gap: 20px; /* Space between each video item */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     margin: 0 auto;
     max-width: 600px; /* Set a maximum width for better reel effect */
-    overflow-y: scroll; /* Enable vertical scrolling */
-    height: 90vh; /* Allow the container to fill most of the viewport height */
 }
 
 /* Video Item */
