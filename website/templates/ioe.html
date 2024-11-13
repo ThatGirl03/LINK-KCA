@@ -1,29 +1,27 @@
 {% extends "base.html" %}
-{% block title %}agric{% endblock %}
+{% block title %}IoE{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/sectorA.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/sectorA.css') }}"/>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/video.css') }}" />
 <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"/>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/reels.css') }}"/>
 
+
 <div class="title-container">
-    <h2 class="page-title">AGRICULTURAL SCIENCES</h2>
+    <h2 class="page-title">INTERNET OF EVERYTHING</h2>
 </div>
 
 <div class="video-grid-container">
-    {% for video in agric %}
+    {% for video in ioe %}
     <div class="video-item">
         <video width="100%" controls>
-            <source src="{{ agric.url }}" type="agric/mp4">
+            <source src="{{ ioe.url }}" type="ioe/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>{{ agric.name }}</p> 
+        <p>{{ ioe.name }}</p> 
     </div>
     {% endfor %}
-  </div>
-
-  
 </div>
 
 {% endblock %}

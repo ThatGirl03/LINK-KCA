@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Biz{% endblock %}
+{% block title %}entrepreneurship{% endblock %}
 
 {% block content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/sectorA.css') }}" />
@@ -8,24 +8,23 @@
 rel="stylesheet"
 href="{{ url_for('static', filename='css/styles.css') }}"
 />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reels.css') }}"/>
 
 <div class="title-container">
-    <h2 class="page-title">Entrepreneurship</h2>
+    <h2 class="page-title">ENTREPRENEURSHIP</h2>
 </div>
 
 <div class="video-grid-container">
-    <!-- Video 1 -->
+    {% for video in entrepreneurship %}
     <div class="video-item">
         <video width="100%" controls>
-            <source src="{{ url_for('static', filename='videos/biz.mp4') }}" type="video/mp4">
+            <source src="{{ entrepreneurship.url }}" type="entrepreneurship/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Be an Entrepreneur!</p>
+        <p>{{ entrepreneurship.name }}</p> 
     </div>
-
-    
-
-    <!-- Add more video items as needed -->
+    {% endfor %}
+</div>
 </div>
 
 {% endblock %}

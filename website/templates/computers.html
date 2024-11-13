@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Computers{% endblock %}
+
+{% block content %}
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='css/sectorA.css') }}"
+/>
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='css/styles.css') }}"
+/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reels.css') }}"/>
+
+<div class="title-container">
+    <h2 class="page-title">COMPUTERS</h2>
+</div>
+
+<div class="video-grid-container">
+    {% for video in computers %}
+    <div class="video-item">
+        <video width="100%" controls>
+            <source src="{{ computers.url }}" type="computers/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>{{ computers.name }}</p> 
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

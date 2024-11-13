@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Title Container */
+.title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Video Grid Container */
+.video-grid-container {
+    display: flex;
+    flex-direction: column; /* Stack videos vertically */
+    gap: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 600px; /* Set a maximum width for better reel effect */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    height: 90vh; /* Allow the container to fill most of the viewport height */
+}
+
+/* Video Item */
+.video-item {
+    background-color: #27cfb3;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    height: 500px; /* Reel-style height */
+    width: 100%; /* Make it fill the container's width */
+    overflow: hidden;
+}
+
+.video-item video {
+    height: 100%; /* Full height of the item */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop to fit the reel style */
+}
+
+.video-item p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 8px;
+}

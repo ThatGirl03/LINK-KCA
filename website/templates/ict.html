@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Cisco{% endblock %}
+{% block title %}ICT{% endblock %}
 
 {% block content %}
 <link
@@ -10,9 +10,22 @@
 rel="stylesheet"
 href="{{ url_for('static', filename='css/styles.css') }}"
 />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reels.css') }}"/>
 
 <div class="title-container">
-  <h2 class="page-title">IoT</h2>
+  <h2 class="page-title">ICT</h2>
+</div>
+
+<div class="video-grid-container">
+  {% for video in ict %}
+  <div class="video-item">
+      <video width="100%" controls>
+          <source src="{{ ict.url }}" type="ict/mp4">
+          Your browser does not support the video tag.
+      </video>
+      <p>{{ ict.name }}</p> 
+  </div>
+  {% endfor %}
 </div>
 
 {% endblock %}

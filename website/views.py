@@ -425,9 +425,21 @@ def engineer():
 def robotics():
     return render_template('robotics.html')
 
+@views.route('/ioe')
+def ioe():
+    return render_template('ioe.html')
+
+@views.route('/blockchain')
+def blockchain():
+    return render_template('blockchain.html')
+
 @views.route('/physics')
 def physics():
     return render_template('physics.html')
+
+@views.route('/computers')
+def computers():
+    return render_template('computers.html')
 
 @views.route('/iot')
 def iot():

@@ -9,7 +9,7 @@
 
 
 <div class="title-container">
-    <h2 class="page-title">Accounting </h2>
+    <h2 class="page-title">ACCOUNTING </h2>
 </div>
 
 
@@ -42,13 +42,13 @@
 </div>
 
 <div class="video-grid-container">
-    {% for video in videos %}
+    {% for video in accounting %}
     <div class="video-item">
         <video width="100%" controls>
-            <source src="{{ video.url }}" type="video/mp4">
+            <source src="{{ accounting.url }}" type="accounting/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>{{ video.name }}</p> 
+        <p>{{ accounting.name }}</p> 
     </div>
     {% endfor %}
 </div>
